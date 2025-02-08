@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
-function ShimmerButton() {
+export function ShimmerButton() {
   const [, setHovered] = useState(false);
 
   return (
@@ -23,17 +23,14 @@ function ShimmerButton() {
 
 export default function Hero() {
   return (
-    <section className="py-16 md:pt-48 overflow-hidden h-screen -mt-36">
+    <section className="py-16 md:pt-60 overflow-hidden h-screen -mt-36">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-heading tracking-normal leading-tight">
+          <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-6 font-heading tracking-normal leading-tight font-poppins">
             Beautiful Websites, Seamless Mobile Apps, and Results-Driven SEO.
           </h1>
           <p className="text-xl md:text-xl text-gray-600 mb-10 font-body leading-relaxed">
-            Hi, I&apos;m Izabelle, I craft user-centric digital experiences that
-            drive growth and engagement. Whether it&apos;s a stunning website, a
-            powerful mobile app, or top-tier SEO, I help businesses thrive
-            online.
+            User-centric digital experiences that drive growth and engagement.
           </p>
           <ShimmerButton />
         </div>

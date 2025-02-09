@@ -10,9 +10,9 @@ export function ShimmerButton() {
   return (
     <Link
       href="#contact"
-      className="relative overflow-hidden bg-indigo-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-colors font-heading 
+      className="relative overflow-hidden bg-teal-800 text-white px-4 py-4 rounded-md text-md font-semibold transition-colors font-heading 
                  before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent 
-                 before:translate-x-[-100%] before:transition-transform before:duration-1000 hover:before:translate-x-[100%] hover:bg-indigo-700"
+                 before:translate-x-[-100%] before:transition-transform before:duration-1000 hover:before:translate-x-[100%] hover:bg-teal-700"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -23,7 +23,7 @@ export function ShimmerButton() {
 
 export default function Hero() {
   return (
-    <section className="py-16 md:pt-60 overflow-hidden h-screen -mt-36">
+    <section className="py-16 pt-48 md:pt-48 overflow-hidden md:h-screen -mt-36">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-6 font-heading tracking-normal leading-tight font-poppins">
@@ -34,12 +34,12 @@ export default function Hero() {
           </p>
           <ShimmerButton />
         </div>
-        <div className="relative">
+        <div className="relative p-16 mb-8">
           <Image
-            src="hero-graphic.svg"
-            alt="Hero Graphic"
-            width={800}
-            height={500}
+            src="outline-graphic.svg"
+            alt="Outline Graphic"
+            width={700}
+            height={400}
           />
           {/* <svg
             viewBox="0 0 200 200"

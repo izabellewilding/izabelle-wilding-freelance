@@ -13,7 +13,7 @@ export default function Footer() {
               href="https://github.com/izabellewilding"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-teal-400 transition-colors"
+              className="hover:text-indigo-400 transition-colors"
             >
               <Github className="w-6 h-6" />
             </a>
@@ -21,7 +21,7 @@ export default function Footer() {
               href="https://linkedin.com/in/izabellewilding"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-teal-400 transition-colors"
+              className="hover:text-indigo-400 transition-colors"
             >
               <Linkedin className="w-6 h-6" />
             </a>
@@ -29,7 +29,7 @@ export default function Footer() {
               href="https://twitter.com/izabellewilding"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-teal-400 transition-colors"
+              className="hover:text-indigo-400 transition-colors"
             >
               <Twitter className="w-6 h-6" />
             </a>

@@ -1,25 +1,6 @@
 "use client";
-
-import Link from "next/link";
-import { useState } from "react";
+import { Button } from "./Button";
 import Image from "next/image";
-
-export function ShimmerButton() {
-  const [, setHovered] = useState(false);
-
-  return (
-    <Link
-      href="#contact"
-      className="relative overflow-hidden bg-teal-800 text-white px-4 py-4 rounded-md text-md font-semibold transition-colors font-heading 
-                 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent 
-                 before:translate-x-[-100%] before:transition-transform before:duration-1000 hover:before:translate-x-[100%] hover:bg-teal-700"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      Let&apos;s work together
-    </Link>
-  );
-}
 
 export default function Hero() {
   return (
@@ -27,12 +8,14 @@ export default function Hero() {
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-6 font-heading tracking-normal leading-tight font-poppins">
-            Beautiful Websites, Seamless Mobile Apps, and Results-Driven SEO.
+            Beautiful, SEO friendly websites at affordable prices
           </h1>
           <p className="text-xl md:text-xl text-gray-600 mb-10 font-body leading-relaxed">
-            User-centric digital experiences that drive growth and engagement.
+            I can help you build a great web presene to drive growth and
+            engagement.
           </p>
-          <ShimmerButton />
+          {/* <Button text="Get in Touch" /> */}
+          <Button variant="light" text="Request a free consultation" />
         </div>
         <div className="relative p-16 mb-8">
           <Image

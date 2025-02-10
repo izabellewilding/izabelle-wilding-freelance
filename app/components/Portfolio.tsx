@@ -31,7 +31,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="bg-teal-50 rounded-lg overflow-hidden shadow-md"
+              className="bg-indigo-50 rounded-lg overflow-hidden shadow-md"
             >
               <Image
                 src={project.image || "/placeholder.svg"}

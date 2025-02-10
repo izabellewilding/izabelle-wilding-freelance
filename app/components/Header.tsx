@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ShimmerButton } from "./Hero";
+import { Button } from "./Button";
 
 export default function Header() {
   return (
@@ -7,7 +7,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link
           href="/"
-          className="text-2xl font-bold text-teal-600 font-heading"
+          className="text-2xl font-bold text-indigo-600 font-heading"
         >
           IW
         </Link>
@@ -16,7 +16,7 @@ export default function Header() {
             <li>
               <Link
                 href="#about"
-                className="text-gray-700 hover:text-teal-600 transition-colors font-body"
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
               >
                 About
               </Link>
@@ -24,7 +24,7 @@ export default function Header() {
             <li>
               <Link
                 href="#skills"
-                className="text-gray-700 hover:text-teal-600 transition-colors font-body"
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
               >
                 Skills
               </Link>
@@ -32,7 +32,7 @@ export default function Header() {
             <li>
               <Link
                 href="#portfolio"
-                className="text-gray-700 hover:text-teal-600 transition-colors font-body"
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
               >
                 Portfolio
               </Link>
@@ -40,7 +40,7 @@ export default function Header() {
             <li>
               <Link
                 href="#contact"
-                className="text-gray-700 hover:text-teal-600 transition-colors font-body"
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
               >
                 Contact
               </Link>

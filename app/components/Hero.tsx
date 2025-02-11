@@ -15,7 +15,7 @@ export default function Hero() {
             engagement.
           </p>
           {/* <Button text="Get in Touch" /> */}
-          <Button variant="light" text="Request a free consultation" />
+          <Button variant="dark" text="Request a free consultation" />
         </div>
         <div className="relative p-16 mb-8">
           <Image

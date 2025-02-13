@@ -4,20 +4,22 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="py-16 pt-48 md:pt-48 overflow-hidden md:h-screen -mt-36">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <section className="overflow-hidden  flex items-center justify-center pt-20 md:-mt-16">
+      <div className="container mx-auto px-8 grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-6 font-heading tracking-normal leading-tight font-poppins">
-            Beautiful, SEO friendly websites at affordable prices
+          <p className="text-xl  md:text-sm text-[#747a68]  font-body leading-relaxed"></p>
+          <h1 className="text-5xl md:text-6xl font-semibold leading-none text-[#9a9a45] mb-6 font-heading">
+            Websites for the modern age
           </h1>
-          <p className="text-xl md:text-xl text-gray-600 mb-10 font-body leading-relaxed">
-            I can help you build a great web presene to drive growth and
-            engagement.
+          <p className="text-xl  md:text-lg text-[#747a68] mb-10 font-body leading-relaxed">
+            Freelance Web Developer based in Bristol.
           </p>
-          {/* <Button text="Get in Touch" /> */}
-          <Button variant="dark" text="Request a free consultation" />
+          <div className="flex gap-5 ">
+            <Button variant="dark" text="Let's speak!" />
+            <Button variant="dark" outline text="See my work" />
+          </div>
         </div>
-        <div className="relative p-16 mb-8">
+        <div className="relative p-2 md:p-16 col-start-1 md:col-start-2">
           <Image
             src="outline-graphic.svg"
             alt="Outline Graphic"

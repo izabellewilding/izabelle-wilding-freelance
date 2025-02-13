@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Logos() {
   return (
-    <div className="w-full bg-white opacity-50">
+    <div className="w-full">
       <div className="w-full md:max-w-screen-xl m-auto py-6 px-6 flex flex-col md:flex-row items-center justify-between">
         <Image
           src="/figma.svg"

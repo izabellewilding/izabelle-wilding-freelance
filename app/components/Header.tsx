@@ -3,20 +3,17 @@ import { Button } from "./Button";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 bg-white bg-opacity-90 backdrop-blur-sm shadow-sm">
+    <header className="sticky top-0 z-10 bg-opacity-90 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl font-bold text-indigo-600 font-heading"
-        >
-          IW
+        <Link href="/" className="text-xl text-slate-600 font-heading">
+          Izabelle Wilding
         </Link>
         <nav>
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-10">
             <li>
               <Link
                 href="#about"
-                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
+                className="text-gray-900 hover:text-indigo-600 transition-colors font-body"
               >
                 About
               </Link>
@@ -24,7 +21,7 @@ export default function Header() {
             <li>
               <Link
                 href="#skills"
-                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
+                className="text-gray-900 hover:text-indigo-600 transition-colors font-body"
               >
                 Skills
               </Link>
@@ -32,7 +29,7 @@ export default function Header() {
             <li>
               <Link
                 href="#portfolio"
-                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
+                className="text-gray-900 hover:text-indigo-600 transition-colors font-body"
               >
                 Portfolio
               </Link>
@@ -40,7 +37,7 @@ export default function Header() {
             <li>
               <Link
                 href="#contact"
-                className="text-gray-700 hover:text-indigo-600 transition-colors font-body"
+                className="text-gray-900 hover:text-indigo-600 transition-colors font-body"
               >
                 Contact
               </Link>

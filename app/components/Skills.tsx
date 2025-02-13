@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const skills = [
   {
-    name: "Brand Identity",
+    name: "Logos & Design",
     icon: "/bulb.svg",
     description: (
       <ul className="">
@@ -12,17 +12,19 @@ const skills = [
     ),
   },
   {
-    name: "Website Development",
+    name: "Custom Websites",
     icon: "/code.svg",
     description: (
       <>
-        I build <strong>fast, fully responsive</strong>, and{" "}
-        <strong>SEO-optimized</strong> websites using{" "}
-        <strong>cutting-edge technologies</strong> like React and
-        Next.js—ensuring <strong>top-tier performance</strong> and a seamless
-        user experience on any device.
+        I can make you a brand new website using Wordpress or update your
+        existing website.
       </>
     ),
+  },
+  {
+    name: "Frontend Development",
+    icon: "/code.svg",
+    description: <>Javascript, Typescript, CSS, HTML, ReactJS and NextJS.</>,
   },
   {
     name: "Performance Optimization",
@@ -35,20 +37,41 @@ const skills = [
       </>
     ),
   },
+  {
+    name: "AI & Chatbots",
+    icon: "/speech.svg",
+    description: (
+      <>
+        I design and build AI-powered chatbots that streamline customer service,
+        boost engagement, and drive sales—helping your business provide instant,
+        intelligent, and personalized interactions 24/7.
+      </>
+    ),
+  },
+  {
+    name: "SEO",
+    icon: "/optimise.svg",
+    description: (
+      <>
+        I will help your business appear higher in search rankings, helping to
+        get your business found.
+      </>
+    ),
+  },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-[#faf9f5]">
-      <div className="bg-[#faf9f5] container mx-auto px-4 pb-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-12 max-w-screen-2xl text-center">
-          I can help you with
+    <section id="skills" className="py-20">
+      <div className=" container mx-auto px-4 pb-24">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-12 max-w-screen-2xl ">
+          Professional help with...
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className=" p-6 pb-16 rounded-lg flex flex-col items-center justify-center text-center space-y-4"
+              className="p-6 pb-16 rounded-lg flex flex-col items-center justify-center text-center space-y-4"
             >
               <div className="h-20 w-20 flex items-center justify-center">
                 <Image
@@ -56,10 +79,10 @@ export default function Skills() {
                   alt={skill.name}
                   width={50}
                   height={50}
-                  className="w-20 h-20 object-contain"
+                  className="w-16 h-16 object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold text-gray-800">
                 {skill.name}
               </h3>
               <p className="text-gray-600 flex-grow text-lg tracking-wide">

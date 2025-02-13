@@ -16,10 +16,10 @@ export function Button({
 
   const variants = {
     dark: {
-      base: "bg-green-800 text-white",
-      hover: "hover:bg-green-700",
+      base: "bg-slate-900 text-white",
+      hover: "hover:bg-indigo-500",
       outline:
-        "border border-green-800 text-green-800 bg-transparent hover:bg-green-800 hover:text-white",
+        "border border-slate-800 text-slate-800 bg-transparent hover:bg-slate-800 hover:text-white",
     },
     light: {
       base: "bg-green-300 text-green-900",
@@ -37,9 +37,7 @@ export function Button({
   return (
     <Link
       href="#contact"
-      className={`relative overflow-hidden ${buttonClass} px-6 py-4 rounded-full text-md font-semibold transition-colors font-heading 
-                 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent 
-                 before:translate-x-[-100%] before:transition-transform before:duration-1000 hover:before:translate-x-[100%]`}
+      className={`relative overflow-hidden font-semibold rounded-lg ${buttonClass} px-4 py-3  font-heading`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >

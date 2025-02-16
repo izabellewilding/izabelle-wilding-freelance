@@ -1,13 +1,27 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google"; // Import Poppins
+import { Poppins, Atkinson_Hyperlegible, Manrope } from "next/font/google"; // Import both fonts
 import localFont from "next/font/local";
 import "./globals.css";
 
 // Configure Poppins
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+});
+
+// Configure Poppins
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // Add the weights you need
-  variable: "--font-poppins", // Define a CSS variable for Poppins
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+// Configure Atkinson Hyperlegible
+const atkinson = Atkinson_Hyperlegible({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Available weights
+  variable: "--font-atkinson",
 });
 
 // Local fonts (Geist)
@@ -35,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} ${atkinson.variable} ${geistSans.variable} ${manrope.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

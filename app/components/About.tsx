@@ -1,42 +1,147 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-20">
-      <div className="container mx-auto px-4">
-        {/* <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center font-heading">
-          Hi! I'm Izabelle. A freelance web designer and developer currently
-          working from the UK.
-        </h2> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 container">
-          <Image
-            src="/simple-life.jpg "
-            alt="Simple Life"
-            width={500}
-            height={400}
-            className="rounded-lg"
+    <section id="about" className="bg-white">
+      <div className="gap-16 h-full items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+        {/* Images with animation */}
+        <motion.div
+          className="grid grid-cols-2 gap-4 mt-8"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.img
+            className="w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+            alt="office content 1"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           />
-          <div className=" max-w-md">
-            <h1 className=" font-bold text-2xl mt-24 mb-8">
-              Beautiful custom websites and mobile apps.
-            </h1>
-            <p className="text-lg  text-gray-800 mb-6 font-body">
-              I specialise in building beautiful, SEO friendly websites that are
-              fast and responsive. I have a passion for creating modern and
-              intuitive user interfaces that provide a great user experience.
-              After years of working in the private sector for startups, banks,
-              and digital agencies, I have a great understanding of business
-              needs. helped businesses create standout visuals that leave a
-              lasting impression.
-            </p>
-            {/* <p className="text-lg text-gray-600 font-body">
-              My passion is to help people level up their online presence and
-              grow their businesses. I am always looking for oppotunities, no
-              matter how big or small, to help people achieve their goals.
-            </p> */}
-          </div>
-        </div>
+          <motion.img
+            className="mt-4 w-full lg:mt-10 rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+            alt="office content 2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          />
+        </motion.div>
+
+        {/* Text Content with Animation */}
+        <motion.div
+          className="font-light text-gray-500 sm:text-lg dark:text-gray-400"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+        >
+          <motion.h2
+            className="mb-6 text-4xl tracking-tight font-extrabold font-manrope text-gray-900 dark:text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+          >
+            Hey, I'm Izabelle.
+          </motion.h2>
+
+          <motion.p
+            className="mb-8 text-md text-slate-700 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+          >
+            I've put over 7 years of hard work into learning how to build
+            cutting-edge websites that stay ahead of the curve and bring your
+            business the results it deserves.
+          </motion.p>
+
+          {/* Animated List */}
+          <motion.div
+            className="grid grid-cols-2 gap-2 flex-initial text-slate-700 font-atkinson"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+          >
+            <motion.ul className="list-disc pl-5">
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                CMS development
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                UX/UI design
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                Copywriting
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                SEO
+              </motion.li>
+            </motion.ul>
+            <motion.ul className="list-disc">
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                Web Development
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                A/B Testing
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                CMS development
+              </motion.li>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+              >
+                UX/UI design
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

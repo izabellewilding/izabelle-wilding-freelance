@@ -27,7 +27,7 @@ export default function Portfolio() {
         </h2> */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.name} className="">
+            <div key={project.name}>
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.name}

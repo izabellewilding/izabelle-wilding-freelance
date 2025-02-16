@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         poppins: "var(--font-poppins)",
+        atkinson: "var(--font-atkinson)",
+        manrope: "var(--font-manrope)",
       },
       colors: {
         background: "hsl(var(--background))",

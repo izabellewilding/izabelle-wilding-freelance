@@ -9,7 +9,7 @@ import Logos from "./components/Logos";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#008b8b]">
+    <div className="min-h-screen bg-[#e2dcef]">
       <Header />
       <main>
         <Hero />

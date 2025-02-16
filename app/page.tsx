@@ -9,13 +9,13 @@ import Logos from "./components/Logos";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#fefefe]">
+    <div className="min-h-screen bg-[#008b8b]">
       <Header />
       <main>
         <Hero />
+        <About />
         <Portfolio />
         <Logos />
-        <About />
 
         <Skills />
 

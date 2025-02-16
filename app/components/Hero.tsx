@@ -8,11 +8,12 @@ export default function Hero() {
       <div className="container mx-auto px-8 grid md:grid-cols-2 gap-8 items-center">
         <div>
           <p className="text-xl  md:text-sm text-[#747a68]  font-body leading-relaxed"></p>
-          <h1 className="text-5xl md:text-6xl font-semibold leading-none text-[#9a9a45] mb-6 font-heading">
-            Websites for the modern age
+          <h1 className="text-5xl md:text-5xl font-semibold leading-none text-[#1a4f6b] mb-6 font-heading">
+            I help businesses thrive with exceptional websites
           </h1>
-          <p className="text-xl  md:text-lg text-[#747a68] mb-10 font-body leading-relaxed">
-            Freelance Web Developer based in Bristol.
+          <p className="text-xl  md:text-lg text-gray-600 mb-10 font-body leading-relaxed">
+            I design & develop sleek, high-performing websites for startups,
+            creatives, and businesses that want to stand out.{" "}
           </p>
           <div className="flex gap-5 ">
             <Button variant="dark" text="Let's speak!" />
@@ -23,8 +24,8 @@ export default function Hero() {
           <Image
             src="outline-graphic.svg"
             alt="Outline Graphic"
-            width={700}
-            height={400}
+            width={600}
+            height={300}
           />
           {/* <svg
             viewBox="0 0 200 200"

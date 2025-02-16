@@ -22,9 +22,9 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-md md:text-xl font-bold text-gray-800 mb-12 font-heading">
+        {/* <h2 className="text-md md:text-xl font-bold text-gray-800 mb-12 font-heading">
           Examples of Previous Projects
-        </h2>
+        </h2> */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.name} className="">

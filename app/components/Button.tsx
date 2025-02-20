@@ -16,13 +16,13 @@ export function Button({
 
   const variants = {
     dark: {
-      base: "bg-indigo-600 text-white",
+      base: "bg-[#001224] text-white spacing-md tracking-wide antialiased text-[17px] bg-[#041d36]",
       hover: "hover:bg-indigo-500",
       outline:
-        "border border-slate-800 text-slate-800 bg-transparent hover:bg-slate-800 hover:text-white",
+        "border border-[#ffb469] text-[#ffb469] bg-transparent hover:bg-slate-800 hover:text-white font-semibold",
     },
     light: {
-      base: "bg-green-300 text-green-900",
+      base: "bg-slate-400 text-white",
       hover: "hover:bg-green-400",
       outline:
         "border border-green-300 text-green-900 bg-transparent hover:bg-green-300 hover:text-green-900",

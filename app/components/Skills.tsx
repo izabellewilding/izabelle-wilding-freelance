@@ -64,14 +64,15 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20">
       <div className=" container mx-auto px-4 pb-24">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-12 max-w-screen-2xl ">
-          Professional help with...
-        </h2>
+        {/* <h2 className="text-2xl md:text-5xl font-bold text-gray-800 mb-12 max-w-screen-2xl ">
+          Professional web development services including:
+        </h2> */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="p-6 pb-16 rounded-lg flex flex-col items-center justify-center text-center space-y-4"
+              className="p-6 pb-16 rounded-lg flex flex-col items-center justify-center text-center space-y-4 bg-[#F9F9FF] shadow-md
+              "
             >
               <div className="h-20 w-20 flex items-center justify-center">
                 <Image
@@ -82,7 +83,7 @@ export default function Skills() {
                   className="w-16 h-16 object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-2xl font-semibold text-gray-800 pt-8">
                 {skill.name}
               </h3>
               <p className="text-gray-600 flex-grow text-lg tracking-wide">

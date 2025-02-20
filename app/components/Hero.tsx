@@ -5,30 +5,33 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="overflow-hidden flex items-center justify-center pt-20 md:-mt-16">
-      <div className="container mx-auto px-8 grid md:grid-cols-2 gap-8 items-center">
+    <section className="relative overflow-hidden flex items-center justify-center pt-20 md:-mt-16 bg-[#fffcf9]">
+      {/* Animated Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-r animate-gradient" />
+
+      <div className="container mx-auto px-16 grid md:grid-cols-2 gap-8 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-5xl md:text-5xl font-manrope font-bold leading-none text-sky-950 mb-6 font-heading"
+            className="text-5xl md:text-6xl font-manrope font-bold leading-none text-[#001224] mb-10 font-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            Freelance website designer & developer
+            Freelance Web designer & developer
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-lg text-gray-600 mb-10 font-body leading-relaxed"
+            className="text-xl md:text-xl text-[#001224] mb-10 font-body leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
-            I design & develop sleek, high-performing websites for startups,
-            creatives, and businesses that want to stand out.
+            Sleek, performant websites that will make you{" "}
+            <strong>stand out.</strong>
           </motion.p>
 
           <motion.div
@@ -43,7 +46,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="relative p-2 md:p-16 col-start-1 md:col-start-2"
+          className="relative p-2 md:p-20 mb-24 col-start-1 md:col-start-2"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
@@ -51,11 +54,30 @@ export default function Hero() {
           <Image
             src="outline-graphic.svg"
             alt="Outline Graphic"
-            width={600}
+            width={500}
             height={300}
           />
         </motion.div>
       </div>
+
+      {/* Tailwind animation (CSS Keyframes) */}
+      <style jsx>{`
+        @keyframes gradientBG {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        .animate-gradient {
+          background-size: 300% 300%;
+          animation: gradientBG 8s ease infinite;
+        }
+      `}</style>
     </section>
   );
 }

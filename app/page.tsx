@@ -5,17 +5,17 @@ import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-// import Logos from "./components/Logos";
+import Logos from "./components/Logos";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className=" px-14">
         <Hero />
-        {/* <Logos /> */}
-        <About />
         <Skills />
+        <Logos />
+        <About />
         <Portfolio />
         <Contact />
       </main>

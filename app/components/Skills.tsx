@@ -26,35 +26,14 @@ const skills = [
     icon: "/code.svg",
     description: <>Javascript, Typescript, CSS, HTML, ReactJS and NextJS.</>,
   },
-  {
-    name: "Performance Optimization",
-    icon: "/optimise.svg",
-    description: (
-      <>
-        I optimize websites for{" "}
-        <strong>speed, accessibility, and performance</strong>, running in-depth
-        tests to ensure a smooth experience for users worldwide.
-      </>
-    ),
-  },
+
   {
     name: "AI & Chatbots",
     icon: "/speech.svg",
     description: (
       <>
         I design and build AI-powered chatbots that streamline customer service,
-        boost engagement, and drive sales—helping your business provide instant,
-        intelligent, and personalized interactions 24/7.
-      </>
-    ),
-  },
-  {
-    name: "SEO",
-    icon: "/optimise.svg",
-    description: (
-      <>
-        I will help your business appear higher in search rankings, helping to
-        get your business found.
+        boost engagement.
       </>
     ),
   },
@@ -63,29 +42,27 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="py-20">
-      <div className=" container mx-auto px-4 pb-24">
+      <div className=" container mx-auto px-4 ">
         {/* <h2 className="text-2xl md:text-5xl font-bold text-gray-800 mb-12 max-w-screen-2xl ">
           Professional web development services including:
         </h2> */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="p-6 pb-16 rounded-lg flex flex-col items-center justify-center text-center space-y-4 bg-[#F9F9FF] shadow-md
+              className="p-6 flex flex-col space-y-4 border-t-2 border-slate-200 border-solid
               "
             >
-              <div className="h-20 w-20 flex items-center justify-center">
+              <div className="h-8 w-8 flex">
                 <Image
                   src={skill.icon}
                   alt={skill.name}
                   width={50}
                   height={50}
-                  className="w-16 h-16 object-contain"
+                  className="object-contain"
                 />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-800 pt-8">
-                {skill.name}
-              </h3>
+              <h3 className="text-xl font-semibold">{skill.name}</h3>
               <p className="text-gray-600 flex-grow text-lg tracking-wide">
                 {skill.description}
               </p>

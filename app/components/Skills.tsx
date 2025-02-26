@@ -41,7 +41,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-24 px-24">
       <div className=" container mx-auto px-4 ">
         {/* <h2 className="text-2xl md:text-5xl font-bold text-gray-800 mb-12 max-w-screen-2xl ">
           Professional web development services including:

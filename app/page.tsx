@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className=" px-14">
+      <main className="">
         <Hero />
         <Skills />
         <Logos />

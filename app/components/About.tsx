@@ -15,11 +15,13 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <Image
-            className="w-full rounded-lg max-h-96 w-auto"
-            width="500"
-            height={300}
+            className="w-full rounded-lg"
             src="/screen.jpg"
             alt="office content 1"
+            width={1000}
+            height={600}
+            quality={100}
+            priority
           />
           {/* <motion.img
             className="mt-4 w-full lg:mt-10 rounded-lg"

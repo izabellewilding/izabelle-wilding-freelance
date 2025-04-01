@@ -40,14 +40,14 @@ export default function About() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         >
-          <motion.h2
+          <motion.h1
             className="mb-6 text-5xl tracking-tight font-extrabold font-manrope text-gray-900 dark:text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           >
             Websites for the modern day
-          </motion.h2>
+          </motion.h1>
 
           <motion.p
             className="mb-8 text-md text-slate-700 leading-relaxed"

@@ -13,12 +13,12 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight text-[#ffffff] mb-8 font-heading"
+            className="text-5xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] mb-8 font-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            Freelance Web Designer & Developer
+            Creative Freelance Web Developer & UI/UX Designer
           </motion.h1>
 
           <motion.p
@@ -37,7 +37,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
           >
-            <Button variant="dark" text="Request a Free Quote" />
+            <Button variant="dark" text="Let's work together" />
             <Button variant="dark" outline text="See my work" />
           </motion.div>
         </motion.div>
@@ -76,27 +76,28 @@ export default function Hero() {
 
       <style jsx>{`
         @keyframes colorShift {
-          0% {
+          0%,
+          16.66% {
             background-color: #727daf;
           }
-          20% {
-            background-color: #727da7;
-          }
-          40% {
+          33.33% {
             background-color: #7d72af;
           }
-          60% {
+          50% {
             background-color: #af727d;
           }
-          80% {
+          66.66% {
             background-color: #72af8d;
           }
+          83.33%,
           100% {
             background-color: #727daf;
           }
         }
         .animate-color-shift {
-          animation: colorShift 20s linear infinite;
+          animation: colorShift 30s ease-in-out infinite;
+          will-change: background-color;
+          transform: translateZ(0);
         }
       `}</style>
     </section>

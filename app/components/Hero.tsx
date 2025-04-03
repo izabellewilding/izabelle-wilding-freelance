@@ -6,41 +6,48 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden flex items-center justify-center pt-20 md:-mt-16 animate-color-shift">
-      <div className="container mx-auto px-16 grid md:grid-cols-2 gap-8 items-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
+      {/* Diagonal line overlay */}
+      <div className="absolute inset-0 diagonal-shine z-[1]"></div>
+
+      {/* Rest of your hero content with higher z-index */}
+      <div className="container mx-auto px-16 grid md:grid-cols-2 gap-8 items-center relative z-[2]">
+        <motion.h1
+          className="hero-title text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight mb-8 font-heading relative"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <motion.h1
-            className="text-5xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] mb-8 font-heading"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          >
-            Creative Freelance Web Developer & UI/UX Designer
-          </motion.h1>
+          <motion.div>
+            <motion.h1
+              className="text-5xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] mb-8 font-heading"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            >
+              Creative Freelance Web Developer & UI/UX Designer
+            </motion.h1>
 
-          <motion.p
-            className="text-lg md:text-xl text-[#001224] mb-10 font-body leading-relaxed tracking-wide"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-          >
-            Cutting edge websites and applications that will make you{" "}
-            <strong className="font-semibold">stand out.</strong>
-          </motion.p>
+            <motion.p
+              className="text-lg md:text-xl text-[#001224] mb-10 font-body leading-relaxed tracking-wide"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+            >
+              Cutting edge websites and applications that will make you{" "}
+              <strong className="font-semibold">stand out.</strong>
+            </motion.p>
 
-          <motion.div
-            className="flex gap-5"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-          >
-            <Button variant="dark" text="Let's work together" />
-            <Button variant="dark" outline text="See my work" />
+            <motion.div
+              className="flex gap-5"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+            >
+              <Button variant="dark" text="Let's work together" />
+              <Button variant="dark" outline text="See my work" />
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </motion.h1>
 
         <motion.div
           className="relative p-2 md:p-12 mb-24 col-start-1 md:col-start-2"
@@ -98,6 +105,133 @@ export default function Hero() {
           animation: colorShift 30s ease-in-out infinite;
           will-change: background-color;
           transform: translateZ(0);
+        }
+        .metallic-sheen {
+          position: relative;
+          color: #001224;
+        }
+
+        .metallic-sheen::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0) 20%,
+            rgba(255, 255, 255, 0.8) 30%,
+            rgba(255, 255, 255, 0.9) 40%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 60%,
+            transparent 100%
+          );
+          background-size: 300% 100%;
+          mix-blend-mode: overlay;
+          animation: shine 5s ease-in-out infinite;
+          pointer-events: none;
+        }
+
+        @keyframes shine {
+          0% {
+            background-position: 100% 0;
+          }
+          100% {
+            background-position: -200% 0;
+          }
+        }
+
+        .shine-overlay {
+          background: linear-gradient(
+            105deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0) 20%,
+            rgba(255, 255, 255, 0.4) 40%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0.4) 60%,
+            rgba(255, 255, 255, 0) 80%,
+            transparent 100%
+          );
+          position: absolute;
+          top: -100%;
+          left: -100%;
+          width: 300%;
+          height: 300%;
+          animation: shine-effect 6s ease-in-out infinite;
+          pointer-events: none;
+          z-index: 2;
+          mix-blend-mode: soft-light;
+        }
+
+        @keyframes shine-effect {
+          0% {
+            transform: translate(-30%, -30%) rotate(-5deg);
+          }
+          100% {
+            transform: translate(30%, 30%) rotate(-5deg);
+          }
+        }
+
+        .static-shine {
+          background: linear-gradient(
+            135deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0) 35%,
+            rgba(255, 255, 255, 0.1) 45%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.1) 55%,
+            rgba(255, 255, 255, 0) 65%,
+            transparent 100%
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          mix-blend-mode: soft-light;
+        }
+
+        .diagonal-line {
+          background: linear-gradient(
+            135deg,
+            transparent 0%,
+            transparent 45%,
+            rgba(255, 255, 255, 0.08) 49%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.08) 51%,
+            transparent 55%,
+            transparent 100%
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          mix-blend-mode: overlay;
+        }
+
+        .diagonal-shine {
+          background: linear-gradient(
+            135deg,
+            transparent 0%,
+            transparent 45%,
+            rgba(255, 255, 255, 0.05) 49%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0.05) 51%,
+            transparent 55%,
+            transparent 100%
+          );
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          pointer-events: none;
+          mix-blend-mode: overlay;
         }
       `}</style>
     </section>

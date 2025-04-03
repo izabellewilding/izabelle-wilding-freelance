@@ -16,22 +16,22 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-5xl md:text-6xl font-manrope font-bold leading-none text-[#001224] mb-10 font-heading"
+            className="text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight text-[#001224] mb-8 font-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           >
-            Freelance Web designer & developer
+            Freelance Web Designer & Developer
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-xl text-[#001224] mb-10 font-body leading-relaxed"
+            className="text-lg md:text-xl text-[#001224] mb-10 font-body leading-relaxed tracking-wide"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           >
             Sleek, performant websites that will make you{" "}
-            <strong>stand out.</strong>
+            <strong className="font-semibold">stand out.</strong>
           </motion.p>
 
           <motion.div
@@ -46,7 +46,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="relative p-2 md:p-20 mb-24 col-start-1 md:col-start-2"
+          className="relative p-2 md:p-12 mb-24 col-start-1 md:col-start-2"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
@@ -54,8 +54,9 @@ export default function Hero() {
           <Image
             src="outline-graphic.svg"
             alt="Outline Graphic"
-            width={500}
-            height={300}
+            width={700}
+            height={420}
+            className="w-full h-auto"
           />
         </motion.div>
       </div>

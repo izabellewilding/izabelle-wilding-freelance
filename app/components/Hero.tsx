@@ -5,10 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden flex items-center justify-center pt-20 md:-mt-16 bg-[#fffcf9]">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-r animate-gradient" />
-
+    <section className="relative overflow-hidden flex items-center justify-center pt-20 md:-mt-16 animate-color-shift">
       <div className="container mx-auto px-16 grid md:grid-cols-2 gap-8 items-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -16,7 +13,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight text-[#001224] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight text-[#ffffff] mb-8 font-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
@@ -77,22 +74,29 @@ export default function Hero() {
         </svg>
       </div>
 
-      {/* Tailwind animation (CSS Keyframes) */}
       <style jsx>{`
-        @keyframes gradientBG {
+        @keyframes colorShift {
           0% {
-            background-position: 0% 50%;
+            background-color: #727daf;
           }
-          50% {
-            background-position: 100% 50%;
+          20% {
+            background-color: #727da7;
+          }
+          40% {
+            background-color: #7d72af;
+          }
+          60% {
+            background-color: #af727d;
+          }
+          80% {
+            background-color: #72af8d;
           }
           100% {
-            background-position: 0% 50%;
+            background-color: #727daf;
           }
         }
-        .animate-gradient {
-          background-size: 300% 300%;
-          animation: gradientBG 8s ease infinite;
+        .animate-color-shift {
+          animation: colorShift 20s linear infinite;
         }
       `}</style>
     </section>

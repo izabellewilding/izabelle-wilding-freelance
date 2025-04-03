@@ -13,10 +13,11 @@ export default function Home() {
       <Header />
       <main className="">
         <Hero />
-        <Logos />
         <Portfolio />
-        <About />
         <Skills />
+        <Logos />
+        <About />
+
         <Contact />
       </main>
       <Footer />

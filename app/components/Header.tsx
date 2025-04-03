@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="sticky top-0 z-10 bg-opacity-90 backdrop-blur-sm shadow-sm">
-      <div className="container mx-auto px-16 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl text-slate-600 font-heading">
           Izabelle Wilding
         </Link>

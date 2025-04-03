@@ -23,7 +23,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-md md:text-4xl font-bold font-manrope text-gray-800 mb-24 font-heading">
+        <h2 className="text-md md:text-4xl text-center font-bold font-manrope text-gray-800 mb-16 font-heading">
           Companies I've worked with
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -19,7 +19,7 @@ export function Button({
       base: "bg-[#1f0421] text-white spacing-md tracking-wide antialiased text-[16px] bg-[#041d36]",
       hover: "hover:bg-indigo-500",
       outline:
-        "border border-[#fdd0a0] text-[#fdd0a0] bg-transparent hover:bg-slate-800 hover:text-white text-[16px]",
+        "border border-[#fdd0a0] text-[#fdd0a0] bg-transparent spacing-md tracking-wide hover:bg-slate-800 hover:text-white text-[16px]",
     },
     light: {
       base: "bg-slate-400 text-white",

@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 diagonal-shine z-[1]"></div>
 
       {/* Rest of your hero content with higher z-index */}
-      <div className="container mx-auto px-16 grid md:grid-cols-2 gap-8 items-center relative z-[2]">
+      <div className="container mx-auto px-16 flex items-center justify-center gap-8 text-center relative z-[2]">
         <motion.h1
           className="hero-title text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight mb-8 font-heading relative"
           initial={{ opacity: 0, y: 30 }}
@@ -19,7 +19,7 @@ export default function Hero() {
         >
           <motion.div>
             <motion.h1
-              className="text-5xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] mb-8 font-heading"
+              className="text-6xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] mb-8 font-heading max-w-[420px]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
@@ -28,7 +28,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-[#ffffff61] mb-10 font-body leading-relaxed tracking-wide"
+              className="text-lg md:text-lg text-[#ffffffbe] mb-10 font-body leading-relaxed tracking-wide"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -48,7 +48,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
         </motion.h1>
-
+        {/* 
         <motion.div
           className="relative p-2 md:p-12 mb-24 col-start-1 md:col-start-2"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -62,7 +62,7 @@ export default function Hero() {
             height={420}
             className="w-full h-auto"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Wave SVG */}

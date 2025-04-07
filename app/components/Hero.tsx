@@ -28,7 +28,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl text-[#001224] mb-10 font-body leading-relaxed tracking-wide"
+              className="text-lg md:text-xl text-[#ffffff61] mb-10 font-body leading-relaxed tracking-wide"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -41,7 +41,7 @@ export default function Hero() {
               className="flex gap-5"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+              // transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             >
               <Button variant="dark" text="Let's work together" />
               <Button variant="dark" outline text="See my work" />

@@ -16,8 +16,8 @@ export function Button({
 
   const variants = {
     dark: {
-      base: "bg-[#1f0421] text-white spacing-md tracking-wide antialiased text-[16px] bg-[#041d36]",
-      hover: "hover:bg-indigo-500",
+      base: "bg-[#1f0421] text-white spacing-md tracking-wide antialiased text-[16px] bg-[#041d36] transition-colors duration-300",
+      hover: "hover:bg-[#370c39]",
       outline:
         "border border-[#fdd0a0] text-[#fdd0a0] bg-transparent spacing-md tracking-wide hover:bg-slate-800 hover:text-white text-[16px]",
     },
@@ -37,11 +37,15 @@ export function Button({
   return (
     <Link
       href="#contact"
-      className={`relative overflow-hidden font-medium rounded-lg ${buttonClass} px-4 py-3 font-heading`}
+      className={`group relative overflow-hidden font-medium rounded-lg ${buttonClass} px-5 py-4 font-heading transition-transform duration-300 hover:scale-105`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {text}
+      <span className="relative z-10">{text}</span>
+      {/* Sheen effect */}
+      <div className="absolute inset-0 flex h-full w-full justify-center transform skew-x-[-12deg] -translate-x-full transition-transform duration-700 group-hover:translate-x-full">
+        <div className="relative h-full w-8 bg-white/20" />
+      </div>
     </Link>
   );
 }

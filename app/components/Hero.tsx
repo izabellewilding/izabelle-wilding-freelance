@@ -10,16 +10,16 @@ export default function Hero() {
       <div className="absolute inset-0 diagonal-shine z-[1]"></div>
 
       {/* Rest of your hero content with higher z-index */}
-      <div className="container mx-auto px-16 flex items-center justify-center gap-8 text-center relative z-[2]">
-        <motion.h1
-          className="hero-title text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight mb-8 font-heading relative"
+      <div className="container mx-auto px-16 flex items-center justify-center gap-8 text-center relative z-[2] max-w-[850px]">
+        <motion.div
+          className="hero-title text-4xl md:text-5xl font-manrope font-bold leading-tight tracking-tight mb-8 font-heading relative p-16 "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <motion.div>
+          <motion.div className="flex flex-col items-center justify-center gap-6">
             <motion.h1
-              className="text-6xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] mb-8 font-heading max-w-[420px]"
+              className="text-5xl font-manrope font-bold leading-tight tracking-tighter text-[#ffffff] font-heading"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
@@ -28,7 +28,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-lg text-[#ffffffbe] mb-10 font-body leading-relaxed tracking-wide"
+              className="text-lg md:text-lg text-[#ffffffbe] font-normal leading-relaxed tracking-wide max-w-[370px]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -38,7 +38,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex gap-5"
+              className="flex gap-5 justify-center items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               // transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
@@ -47,7 +47,7 @@ export default function Hero() {
               <Button variant="dark" outline text="See my work" />
             </motion.div>
           </motion.div>
-        </motion.h1>
+        </motion.div>
         {/* 
         <motion.div
           className="relative p-2 md:p-12 mb-24 col-start-1 md:col-start-2"
@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       {/* Wave SVG */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden rotate-180 transform translate-y-1">
+      <div className="absolute bottom-1 left-0 w-full overflow-hidden rotate-180 transform translate-y-1">
         <svg
           className="relative block w-full h-[50px]"
           data-name="Layer 1"
@@ -85,10 +85,10 @@ export default function Hero() {
         @keyframes colorShift {
           0%,
           16.66% {
-            background-color: #727daf;
+            background-color: #76acac;
           }
           33.33% {
-            background-color: #7d72af;
+            background-color: #a89be4;
           }
           50% {
             background-color: #af727d;
@@ -102,7 +102,7 @@ export default function Hero() {
           }
         }
         .animate-color-shift {
-          animation: colorShift 30s ease-in-out infinite;
+          animation: colorShift 30s ease-in-out forwards;
           will-change: background-color;
           transform: translateZ(0);
         }

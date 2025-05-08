@@ -1,11 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-10 bg-opacity-90 backdrop-blur-sm shadow-sm">
-      <div className="container px-16 mx-auto py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl text-slate-600 font-heading">
-          Izabelle Wilding
+      <div className="container  mx-auto py-4 flex justify-between items-center">
+        <Link href="/" className=" text-slate-600 font-heading">
+          {" "}
+          <Image
+            src="/logo.svg"
+            alt="The logo of Izabelle Wilding, designer and developer"
+            width={50}
+            height={50}
+            className="object-contain"
+          />
         </Link>
         <nav>
           <ul className="flex space-x-10">

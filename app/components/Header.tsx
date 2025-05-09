@@ -5,15 +5,15 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 bg-opacity-90 backdrop-blur-sm shadow-sm">
-      <div className="container  mx-auto py-4 flex justify-between items-center">
+    <header className="sticky top-0 z-10 bg-opacity-50 backdrop-blur-sm shadow-sm bg-[#f5f5f5]">
+      <div className="container mx-auto py-2 flex justify-between items-center">
         <Link href="/" className=" text-slate-600 font-heading">
           {" "}
           <Image
             src="/logo.svg"
             alt="The logo of Izabelle Wilding, designer and developer"
-            width={50}
-            height={50}
+            width={42}
+            height={42}
             className="object-contain"
           />
         </Link>

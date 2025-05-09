@@ -6,16 +6,19 @@ const projects = [
     title: "Qvara",
     image: "/qvara.png",
     description: "A custom design fully responsive website built with Next.js",
+    link: "https://qvara.app/",
   },
   {
     title: "Ecologi",
     image: "/ecologi.png",
     description: "I worked on Ecologi's component library and website in 2022.",
+    link: "https://ecologi.com/",
   },
   {
     title: "Kerve Creative",
     image: "/kerve.png",
     description: "A Bath based creative digital agency.",
+    link: "https://www.kerve.co.uk/",
   },
 ];
 
@@ -32,6 +35,7 @@ export default function Portfolio() {
               title={project.title}
               image={project.image}
               key={project.title}
+              link={project.link}
             />
           ))}
         </div>

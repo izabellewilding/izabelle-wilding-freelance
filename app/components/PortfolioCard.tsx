@@ -6,22 +6,27 @@ import { Button } from "./Button";
 export function PortfolioCard({
   image,
   title,
+  link,
 }: {
   image: string;
   title: string;
+  link: string;
 }) {
   return (
-    <div className="max-w-sm shadow-md bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 pb-2">
-      <a href="#">
-        <div className="h-[300px] w-full relative overflow-hidden">
-          <Image
-            className="rounded-t-lg object-cover"
-            src={image}
-            alt="Blog post"
-            fill
-          />
-        </div>
-      </a>
+    <a
+      href={link}
+      target="__blank"
+      className="max-w-sm shadow-md bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 pb-2"
+    >
+      <div className="h-[300px] w-full relative overflow-hidden">
+        <Image
+          className="rounded-t-lg object-cover"
+          src={image}
+          alt="Blog post"
+          fill
+        />
+      </div>
+
       <div className="p-5">
         <a href="#">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -34,6 +39,6 @@ export function PortfolioCard({
         </p>
         <Button text="Read more" variant="dark" />
       </div>
-    </div>
+    </a>
   );
 }

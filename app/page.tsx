@@ -10,8 +10,9 @@ import Logos from "./components/Logos";
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
       <main className="">
+        <Header />
+
         <Hero />
         <Portfolio />
         <Skills />
